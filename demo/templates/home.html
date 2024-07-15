@@ -1,7 +1,14 @@
-<html>
-  <title>Home</title>
-  <head> </head>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Form</title>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  </head>
   <body>
-    <h1>Hellow</h1>
+    <form method="post">
+      {% csrf_token %} {{ form.as_p }}
+      <button type="submit">Submit</button>
+    </form>
   </body>
 </html>

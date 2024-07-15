@@ -45,7 +45,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'cloudinary'
+    'main',
+    'cloudinary',
+    'django_recaptcha'
 ]
 
 MIDDLEWARE = [
@@ -132,6 +134,18 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-CLOUDNAME="dnxg9zryh"
-API_KEY="739889253111984"
-API_SECRET="w6MfghR-y3KchPTLkJGdlCh4fl0"
+# CLOUDNAME="dnxg9zryh"
+# API_KEY="739889253111984"
+# API_SECRET="w6MfghR-y3KchPTLkJGdlCh4fl0"
+
+
+cloudinary.config(
+    cloud_name="dnxg9zryh",
+    api_key="739889253111984",
+    api_secret="w6MfghR-y3KchPTLkJGdlCh4fl0"
+)
+
+
+RECAPTCHA_PUBLIC_KEY = '6LdZ3w8qAAAAALc3MDhsUVQr4qdG93yFTR-hAQAT'
+RECAPTCHA_PRIVATE_KEY = '6LdZ3w8qAAAAADeueXTuXz9q4KtdmEx-4fRVJ6h9'
+
